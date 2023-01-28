@@ -1,9 +1,12 @@
 // Using CDN
+
 /*
 Reason To Learn React - 
 1. Composable
 2. Declarative
 */
+
+
 // Example Of Composable
 
 function MyCompo() {
@@ -18,6 +21,11 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 )
+
+
+// Declarative (React) - What should be done. mean tell computer what to do and computer will take care of rest
+//Imperative - Tell Computer Step By Step
+
 
 // JSX  - Javascript XML
 //JSX / React return as plain javascript Onbject
@@ -40,6 +48,7 @@ const page = (
     <p>This is a paragraph</p>
   </div>
 )
+
 ReactDOM.render(
   page,
   document.getElementById("root")

@@ -1,0 +1,5 @@
+React main fetaure
+
+1.Declarative - What To Do
+2.Component Architecture - Reuseable Component
+3.One Way Data Flow

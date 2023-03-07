@@ -1,5 +1,5 @@
 ReactDOM.render(<h1>Hello, Everyone</h1>, document.getElementById("root"))
-//                   What i Want to prin         where i want into print
+//               What i Want to print         where i want into print - in somewher root class name
 
 //Practice
 ReactDOM.render(<ul>

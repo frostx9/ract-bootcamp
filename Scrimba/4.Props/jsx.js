@@ -21,6 +21,7 @@ function App() {
   /**
    * Challenge: fix the h1 below to use the timeOfDay
    * string we determined in the code above
+   * We put dynamic value in --> {}..like in js ${}
    */
 
   return (

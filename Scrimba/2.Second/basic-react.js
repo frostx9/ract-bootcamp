@@ -62,6 +62,8 @@ ReactDOM.render(<TemporaryPage />, document.getElementById("root"))
 
 
 //Parent/Child Custom Component - Most Ideal
+
+// Header Child Component
 function Header() {
   return (
     <header>
@@ -77,6 +79,7 @@ function Header() {
   )
 }
 
+// Fotoer Child Component
 function Footer() {
   return (
     <footer>
@@ -85,6 +88,7 @@ function Footer() {
   )
 }
 
+// MainContent Child Component
 function MainContent() {
   return (
     <div>
@@ -109,6 +113,7 @@ function Page() {      // Page () - Parent Component
   )
 }
 
+// We render the Page parent Component
 ReactDOM.render(<Page />, document.getElementById("root"))
 
 

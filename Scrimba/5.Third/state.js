@@ -112,3 +112,66 @@ export default function App() {
     </div>
   )
 }
+
+// Ternary Operator
+
+import React from "react"
+
+export default function App() {
+
+  const isGoingOut = true
+
+  // let answer  // Use ternary here
+  // if (isGoingOut === true) {
+  //   answer = "Yes"
+  // } else {
+  //   answer = "No"
+  // }
+
+  // let answer = isGoingOut === true ? "Yes" : "No" 
+  let answer = isGoingOut ? "Yes" : "No"  // Another Method
+  /**
+   * isGoingOut === true ? --> mean if isGoingOut === true
+   * ? "Yes" --> the it will be yes
+   * : "No" --> Otherwise Not
+   */
+
+
+  return (
+    <div className="state">
+      <h1 className="state--title">Do I feel like going out tonight?</h1>
+      <div className="state--value">
+        <h1>{isGoingOut ? "Yes" : "No"}</h1>
+      </div>
+    </div>
+  )
+}
+
+// Ternary Operator - Practice
+
+import React from "react"
+
+export default function App() {
+
+  cosnt[isGoingOut, setIsGoingOut] = React.useState(true)
+  /**
+   * Challenge: 
+   * - Initialize state for `isGoingOut` as a boolean
+   * - Make it so clicking the div.state--value flips that
+   *   boolean value (true -> false, false -> true)
+   * - Display "Yes" if `isGoingOut` is `true`, "No" otherwise
+   */
+
+  function changeMind() {
+    setIsGoingOut(prevState => !prevState)
+  }
+
+  return (
+    <div className="state">
+      <h1 className="state--title">Do I feel like going out tonight?</h1>
+      <div className="state--value" onClick={changeMind}>
+        <h1>{isGoingOut ? "Yes" : "No"}</h1>
+      </div>
+    </div>
+  )
+}

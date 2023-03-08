@@ -175,3 +175,80 @@ export default function App() {
     </div>
   )
 }
+
+
+//setThingsArray(prevThingsArray => prevThingsArray.push()) ...this will still modify state
+
+// For Array
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+function App() {
+
+  const [originalSet, copyOriginalState] = React.useState(["Things 1", "Things 2"])
+
+  // handleOnClick() func will be executed when onClick Event Listner Called
+  function handleOnClick() {
+    copyOriginalState(prev => {
+      return [...prev, `Things ${prev.length + 1}`]
+    })
+  }
+
+  // For Render New Data
+  const renderThings = originalSet.map((thing) => <p key={thing}>{thing}</p>)
+
+  return (
+    <div>
+      <button onClick={handleOnClick}>Add Item</button>
+      {renderThings}
+    </div>
+  )
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+
+// For Object
+
+const [contact, setContact] = React.useState({
+  firstName: "John",
+  lastName: "Doe",
+  phone: "+1 (719) 555-1212",
+  email: "itsmyrealname@example.com",
+  isFavorite: true
+})
+
+let starIcon = ""
+starIcon = contact.isFavorite ? `../images/star-filled.png` : `../images/star-empty.png`
+
+
+function toggleFavorite() {
+  setContact(prevContact => {
+    return {
+      isFavorite: !prevContact.isFavorite
+    }
+  })
+}
+
+// In this code it replace all object value with only isFavorite
+//So Overcome we have to bring all object in to setContact() with spread opertaor..isFavorite also come, but later it will replcae by new one which
+// is set maually
+
+function toggleFavorite() {
+  setContact(prevContact => {
+    return {
+      ...prevContact,
+      isFavorite: !prevContact.isFavorite
+    }
+  })
+}
+
+// with implicit retrun 
+function toggleFavorite() {
+  setContact(prevContact => ({
+    ...prevContact,
+    isFavorite: !prevContact.isFavorite
+  }))
+}
+

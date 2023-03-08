@@ -33,25 +33,5 @@ export default function App() {
 
 
 
-// For Array
 
-import React from 'react';
-import ReactDOM from 'react-dom';
 
-function App() {
-  const thingsArray = ["Thing 1", "Thing 2"]
-  const thingsElements = thingsArray.map(thing => <p key={thing}> {thing} </p>)  // map the array and retrun within p tag
-
-  function handleOnClick() {
-    thingsArray.push(`Thing ${thingsArray.length + 1}`)
-  }
-
-  return (
-    <div>
-      <button onClick={handleOnClick}>Add Item</button>
-      {thingsElements}
-    </div>
-  )
-}
-
-ReactDOM.render(<App />, document.getElementById('root'));

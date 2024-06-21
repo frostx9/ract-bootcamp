@@ -14,3 +14,10 @@ No Synchronus between State (JS) and Dom
 ## Router is not a part of Actual React Package. It need a another package - react-router-dom
 
 ## Disadvantage or React  - 1.No SEO Friendly  2. Browser Rendering
+
+## npx - Node Package Excuter
+
+# Create React App
+1. npx create-react-app <App Name> (Old Way / Slow)
+2. npm create vite@latest (New / Fast)
+

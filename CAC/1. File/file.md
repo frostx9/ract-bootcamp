@@ -1,6 +1,6 @@
 # File Structure :-
 
-1. There Is Always one Html File In whole React Prokect
+1. There Is Always one Html File In whole React Project
 
 2. In The Html File We can inject javascript inject two method
 

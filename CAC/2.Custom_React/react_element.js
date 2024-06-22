@@ -1,6 +1,6 @@
 // import "React" from "react";
 
-// Creae Element From React Elelment which is passed to React Render Function
+// Create Element From React Elelment which is passed to React Render Function
 
 const variable = "Click Me Again"
 const ReactElelmt = React.createElement(

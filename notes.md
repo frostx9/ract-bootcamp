@@ -21,3 +21,5 @@ No Synchronus between State (JS) and Dom
 1. npx create-react-app <App Name> (Old Way / Slow)
 2. npm create vite@latest (New / Fast)
 
+# JSX - Javascript With HTML
+

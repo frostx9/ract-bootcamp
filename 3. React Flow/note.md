@@ -60,3 +60,49 @@ In *Create React App* we use *react-script* library to inject js file into html
 
 # Second MEthod. 
 In *Vite React App* we use old method. Using Script Tag in Html File
+
+
+
+## How React Breaks Down The Component
+If we return simple Element like <h1> then React Breaks Down the Component into Tree Graph In Following Way. Most Likely it will be like below
+
+fucntion App() {
+  return (
+   <h1>Hello World</h1>
+  )
+}
+
+const reactElement = {
+  type: 'h1',
+  props: {
+    children: 'Hello World'
+  }
+}
+
+or More Preciusely
+
+const reactElement = React.createElement(
+  'h1',
+  {},
+  'Hello World'
+)
+
+
+
+## Inject Variable Into Jsx via Using {}
+function App() {
+  const name = 'Hello World'
+  return (
+   <h1>{name}</h1>  => Evaluate Expression. End Result 
+  )
+}
+
+We Can Not Use any Method in {}, Becuase Eventually it will pass to the React.createElement()
+
+const reactElement = React.createElement(
+  'h1',
+  {},
+  name
+)
+
+And No Method Allowed in Object

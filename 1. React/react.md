@@ -1,13 +1,3 @@
-# Start New Project (With Vite)
-npx create-vite@latest
-
-
-# SPA (Single Page Application)
-React has only one index html page in whole project. That is called Single Page Application.It Just Rendering Every Time (One Html Page)
-when we change the website page. It Possiable Via DOM
-
-
-
 # Flow Of React
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'

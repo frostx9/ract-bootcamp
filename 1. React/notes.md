@@ -3,7 +3,7 @@ Make Easy to manage and build complex Frontend
 
 
 # Why React Was Created
-In early days facebook notification count is not updated (Phantom Message Problem) , though user already read the all notification
+In early days facebook notification count is not updated *(Phantom Message Problem)* , though user already read the all notification
 It still show the count that how many unready notification you have (Ghost/Phantom Message Problem). 
 Because no sync between State (JS) and Dom. To Handle this Problem React Was Created.
 

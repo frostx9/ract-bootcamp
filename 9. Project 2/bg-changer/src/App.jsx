@@ -3,6 +3,7 @@ import './App.css'
 
 function App() {
 
+  // Red is a Fucntion Which is Callback Via onClick
   const red = (data)=>{
     setColor(data)
   }

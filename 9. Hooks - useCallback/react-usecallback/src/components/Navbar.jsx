@@ -7,7 +7,7 @@ function Navbar({navStatus, getNavStatus}) {
   return (
     <div>
       <h1>Navbar Count : {navStatus}</h1>
-      <button onClick={()=> {getNavStatus()}}>{getNavStatus()}</button>
+      <button>{getNavStatus()}</button>
     </div>
   )
 }

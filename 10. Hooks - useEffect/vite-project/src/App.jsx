@@ -17,7 +17,9 @@ function App() {
 
 
   /**
-   * React always renders parent component first (App in this case). Rendering = React building the "virtual DOM tree" of what UI should look like.
+   * In React All Component Render First , then All Effects Rendered
+   * 
+   * React always renders parent component first (App in this case). [Rendering = React building the "virtual DOM tree" of what UI should look like.]
    * 
    * During this phase, React calls App() to know what to render inside it. After Finishing parent rendering completed , When React reaches <Navbar color={color}/> inside App’s JSX, it will then 
    * render the Navbar component.
@@ -33,20 +35,23 @@ function App() {
    * 
    * 1.App renders → builds JSX tree.
    *       While rendering, React sees <Navbar color={color}/>.
-   *       It calls Navbar() to know what to render inside it.
+   *       It calls Navbar() to know what to render
    * 
-   * 2. Navbar renders → React builds Navbar’s JSX tree
-   * 3. React commits both App and Navbar UI to the DOM.
+   * 2. React commits both App and Navbar UI to the DOM.
    * 
-   * 4. Now, React runs all useEffect hooks:
-   *        First useEffect in Navbar (since it mounted).
+   * 3. Now, React runs all useEffect hooks: First All Child Components' useEffects run first, then Parent Component's useEffects run
+   *        First useEffect in Navbar 
    *        Then useEffect in App.
+   * 
+   * 
    * 
    * First render order:
    *  App → then Navbar (because Navbar is inside App).
    * 
-   * First effect order:
+   * Second effect order:
    * Navbar useEffect runs before App useEffect, because React runs child effects first, then parent effects.
+   * 
+   * 
    * 
    * Render + Effect Flow : 
    * App renders (initial count=0, color=0)
@@ -62,12 +67,12 @@ function App() {
    * Navbar Case 3 (dependency: color=0 changed from undefined) -> "Hey I Will Run on Dependancy Changed : Navbar"
    * 
    * App useEffect [count] (dependency: count=0 changed from undefined) -> "Hey I Will Run on Dependancy Changed : Main App"
-   * Inside it: setColor(count+1) → updates color to 1.
-   * State update (color). So It triggers for re-render.
+   * Inside it: setColor(count+1) → updates color to 1. => State update (color). So It triggers for re-render All Parents App and Navbar
+   * 
    * 
    * App renders again (count=0, color=1).
-   * Navbar renders again with color=1. Because State Update Afain With Color=1.
-   *
+   * Navbar renders again with color=1. 
+   * 
    * Child Component Effect Run First
    * Navbar Case 1 → "Hey I Will Run on Every Render : Navbar"
    * Navbar Case 3 (dependency: color changed from 0 → 1) → "Hey I Will Run on Dependancy Changed : Navbar"

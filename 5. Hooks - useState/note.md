@@ -1,6 +1,10 @@
 ## React
 React Library Main Work to Update Ui To Every Time when the State Change
 
+## Hooks
+In React Hooks are a kind of functions that enhance React Functional Components.
+Ex: useEffect , useContext, useState ... etc
+
 ## useState
 import { useState } from 'react'
 

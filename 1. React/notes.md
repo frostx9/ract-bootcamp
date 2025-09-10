@@ -1,5 +1,5 @@
 # Why Use 
-Make Easy to manage and build complex Frontend
+Make Easy to manage and build complex Frontend. Make Component Modular. So We Can Reuse It.
 
 
 # Why React Was Created
@@ -25,7 +25,7 @@ when we change the website page. It Possiable Via DOM
 
 
 # npx - Node Package Excuter - This One Help Us To Create React Project Directly
-# JSX - Javascript With HTML
+# JSX - HTML With Javascript
 
 
 
@@ -33,9 +33,10 @@ when we change the website page. It Possiable Via DOM
 1.No SEO Friendly  2. Browser Rendering
 
 
+## We Can Not use class for css in React - Because class a reserved keyword in javascript
 
 
-
-
+## Comment In React
+{/* Comment */}
 
 

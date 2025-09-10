@@ -19,7 +19,7 @@ function App() {
   /**
    * React always renders parent component first (App in this case). Rendering = React building the "virtual DOM tree" of what UI should look like.
    * 
-   * During this phase, React calls App() to know what to render inside it. When React reaches <Navbar color={color}/> inside App’s JSX, it will then 
+   * During this phase, React calls App() to know what to render inside it. After Finishing parent rendering completed , When React reaches <Navbar color={color}/> inside App’s JSX, it will then 
    * render the Navbar component.
    * 
    * So the render order is:
@@ -66,7 +66,7 @@ function App() {
    * State update (color). So It triggers for re-render.
    * 
    * App renders again (count=0, color=1).
-   * Navbar renders again with color=1.
+   * Navbar renders again with color=1. Because State Update Afain With Color=1.
    *
    * Child Component Effect Run First
    * Navbar Case 1 → "Hey I Will Run on Every Render : Navbar"

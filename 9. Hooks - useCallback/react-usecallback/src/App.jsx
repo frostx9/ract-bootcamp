@@ -13,32 +13,32 @@ function App() {
     //   return `Bad: ${count2}`
     // }
     /**
-     * When We First Render The Main App <Navbar navStatus={"Good"} getNavStatus={getNavStatus}/>
-     * This Will Render First Because it is First in Main Div. It Will console log Navbar Rendered Bad: 0
+     * When We First Render The Main App <Navbar navStatus={"Good"} getNavStatus={getNavStatus}/> Also Render
+     * It Will console log Navbar Rendered Bad: 0
      * Because We Set count2 State to 0
      * 
-     * Now When We Click on Count Button, count state was updated, So Mani App Again Re-Rende.
+     * Now When We Click on Count Button, count state was updated, So Main App Again Re-Rende.
      * As Well as getNavStatus() function also re-creted in memory. It Retrun Same Value Bad: 0 and 
      * pass to the <Navbar navStatus={"Good"} getNavStatus={getNavStatus}/>. Though its not changed the
      * value but memo() will see as props was cahnged so Navbar will re-render.
      * 
-     * Function Was Re-Created in Memory.... Again And Again When We Click in Count Button
+     * Function Was Re-Created again Memory.... Again And Again When We Click in Count Button
      * 
      */
 
-    // Case 1: With useCallback
+    // Case 2: With useCallback
     const getNavStatus = useCallback(()=>{
         return `Bad: ${count2}`
     },[count2])
 
     /**
-     * When We First Render The Main App <Navbar navStatus={"Good"} getNavStatus={getNavStatus}/>
-     * This Will Render First Because it is First in Main Div. It Will console log Navbar Rendered Bad: 0
+     * When We First Render The Main App <Navbar navStatus={"Good"} getNavStatus={getNavStatus}/> Also Render
+     * It Will console log Navbar Rendered Bad: 0
      * Because We Set count2 State to 0
      * 
      * But This Time When We Click on Count Button, count state was updated, Main App Render Again, But
-     * We getNavStatus() function set as a useCallback().. It Will Not Re-creted in Memory. 
-     * Navbar Will Not Re-Render.
+     * We getNavStatus() function set as a useCallback().. It Will Not Re-creted in Memory. memo() Will See
+     * No Props was changed so Navbar Will Not Re-Render.
      * 
      * It Will Re-Created When We Click on Second Count Button, Because count2 State was Updated, So Dependancy 
      * Changed, New Value set as Bad: 1. It Will pass to the props. memo() Will Props was changed so
